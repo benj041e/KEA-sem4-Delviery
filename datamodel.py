@@ -1,4 +1,5 @@
 # Imports
+from pprint import pprint
 import pandas as pd
 import numpy as np
 import calendar
@@ -11,10 +12,10 @@ import calendar
 githubpath = './data/'
 
 # Import from Excel file, 4 different sheets
-df_customers = pd.read_excel(githubpath + "fake_data.xlsx", sheet_name="customers")
-df_order = pd.read_excel(githubpath + "fake_data.xlsx", sheet_name="order")
-df_employee = pd.read_excel(githubpath + "fake_data.xlsx", sheet_name="employee")
-df_products = pd.read_excel(githubpath + "fake_data.xlsx", sheet_name="products")
+df_customers = pd.read_excel(githubpath + "fake_data.xlsx", sheet_name="customers", engine='openpyxl',)
+df_order = pd.read_excel(githubpath + "fake_data.xlsx", sheet_name="order", engine='openpyxl',)
+df_employee = pd.read_excel(githubpath + "fake_data.xlsx", sheet_name="employee", engine='openpyxl',)
+df_products = pd.read_excel(githubpath + "fake_data.xlsx", sheet_name="products", engine='openpyxl',)
 
 
 def get_data():
@@ -54,7 +55,7 @@ def get_year():
     # Year - Create a dataframe with years usede in the order dataframe
     df_year = df_order['orderdate'].dt.strftime("%Y").unique()
     df_year.sort()
-
+    
     return df_year
 
 

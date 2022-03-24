@@ -148,7 +148,7 @@ Taken from https://codepen.io/chriddyp/pen/bWLwgP.css
    /* currently ems cause chrome bug misinterpreting rems on body element */
     line-height: 1.6;
     font-weight: 400;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
   }
   
   /* Typography –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -420,7 +420,7 @@ Taken from https://codepen.io/chriddyp/pen/bWLwgP.css
   
   body {
     background-color: #ffffff;
-    color: #ffffff;
+    /* color: #ffffff; */
     height: 100%;
     margin: 0;
     padding: 0;
@@ -486,7 +486,7 @@ Taken from https://codepen.io/chriddyp/pen/bWLwgP.css
   }
   .Select-control, .Select-menu-outer, .Select-multi-value-wrapper, .select-up, .is-open .Select-control {
     background-color: #ffffff;
-    color: white;
+    color: black
   
   }
   
